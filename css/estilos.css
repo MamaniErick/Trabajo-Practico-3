@@ -1,12 +1,12 @@
 /*Variables Globales*/
 :root {
-    --color-primario: #eb7e26;
-    --color-secundario: #0f74b8;
-    --color-oscuro: #162a6e;
-    --color-claro: #f4f4f4;
+    --color-primario: #70e0fc;
+    --color-secundario: #d8d8d8;
+    --color-oscuro: #1597d3;
+    --color-claro: #f8f9fa;
     --color-blanco: #ffffff;
 }
-
+ 
 /*Estilos Generales*/
 * {
     margin: 0;
