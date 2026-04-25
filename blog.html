@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Mega Turismo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <!--HEADER-->
+    <header>
+        <div class="logo">Mega Turismo</div>
+        <nav>
+            <ul class="menu">
+                <!-- Mega-Menú -->
+                <li class="mega-menu">
+                    <a href="#">☰ MENÚ</a>
+                    <div class="mega-content">                            
+                        <a href="index.html">INICIO</a>
+                        <a href="agencias.html">Agencias</a>
+                        <a href="destinos.html">Destinos</a>
+                        <a href="precios.html">Precios</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>        
+    </header>
+
+    <!--BANNER-->
+    <section class="banner-pagina">
+        <h1>Blog de Destinos</h1>
+        <p>Descubre historias y experiencias inolvidables</p>
+    </section>
+
+    <!--FILTROS-->
+    <section class="contenedor">
+        <h2 class="titulo-seccion">Explora por Categoría</h2>
+        <input type="radio" name="categoria-blog" id="todos" checked>
+        <input type="radio" name="categoria-blog" id="cultura">
+        <input type="radio" name="categoria-blog" id="naturaleza">
+        <input type="radio" name="categoria-blog" id="aventura">
+
+   
+        <div class="botones-filtro">
+            <label for="todos">Todos</label>
+            <label for="cultura">Cultura</label>
+            <label for="naturaleza">Naturaleza</label>
+            <label for="aventura">Aventura</label>
+        </div>
+
+        <!--BLOG GRID-->
+        <div class="blog-grid">
+
+            <article class="blog-card cultura reveal">
+                <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca">
+                <div class="blog-contenido">
+                    <span class="tag">Cultura</span>
+                    <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+                    <p>Un destino icónico del norte argentino lleno de historia y tradición.</p>
+                </div>
+            </article>
+
+            <article class="blog-card naturaleza reveal">
+                <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes">
+                <div class="blog-contenido">
+                    <span class="tag">Naturaleza</span>
+                    <h3>La Magia de las Salinas Grandes</h3>
+                    <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+                </div>
+            </article>
+
+            <article class="blog-card aventura reveal">
+                <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal">
+                <div class="blog-contenido">
+                    <span class="tag">Aventura</span>
+                    <h3>Explorando el Hornocal</h3>
+                    <p>La montaña de los catorce colores, un destino imperdible.</p>
+                </div>
+            </article>
+
+            <article class="blog-card cultura reveal">
+                <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna">
+                <div class="blog-contenido">
+                    <span class="tag">Cultura</span>
+                    <h3>El Valle de la Luna</h3>
+                    <p>El paisaje que parece haber salido del mismo Marte.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!--COMENTARIOS-->
+    <section class="comentarios contenedor">
+        <h2 class="titulo-seccion">Comentarios de Viajeros</h2>
+
+        <div class="comentario">
+            <p>Un lugar mágico que volvería a visitar sin dudar.</p>
+            <h4>Cristiano Ronaldo</h4>
+        </div>
+
+        <div class="comentario">
+            <p>La cultura y los paisajes de Jujuy son incomparables.</p>
+            <h4>Lionel Messi</h4>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Mega Turismo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

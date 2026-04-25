@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Turismo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Destinos|Mega Turismo</div>
+        <nav>
+            <ul class="menu">
+                <!-- Mega-Menú -->
+                <li class="mega-menu">
+                    <a href="#">☰ MENÚ</a>
+                    <div class="mega-content">                            
+                        <a href="index.html">INICIO</a>
+                        <a href="agencias.html">Agencias</a>
+                        <a href="precios.html">Precios</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>        
+    </header>
+    <!--TITULO-->
+    <section class="banner-pagina">
+        <h1>Explora Nuestros Destinos</h1>
+        <p>Descubre los lugares más fascinantes de Jujuy</p>
+    </section>
+
+    <!--FILTRAR-->
+    <section class="filtros contenedor">
+        <h2>Filtrar por categoría</h2>
+
+        <input type="radio" name="categoria" id="todos" checked>
+        <input type="radio" name="categoria" id="cultural">
+        <input type="radio" name="categoria" id="naturaleza">
+        <input type="radio" name="categoria" id="gastronomico">
+        <input type="radio" name="categoria" id="religioso">
+
+        <div class="botones-filtro">
+            <label for="todos">Todos</label>
+            <label for="cultural">Cultural</label>
+            <label for="naturaleza">Naturaleza</label>
+            <label for="gastronomico">Gastronómico</label>
+            <label for="religioso">Religioso</label>
+        </div>
+        <div class="galeria">
+
+            <article class="card naturaleza">
+                <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna">
+                <div class="overlay">
+                    <h3>Valle de la Luna</h3>
+                </div>
+            </article>
+
+            <article class="card naturaleza">
+                <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes">
+                <div class="overlay">
+                    <h3>Salinas Grandes</h3>
+                </div>
+            </article>
+
+            <article class="card cultural">
+                <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca">
+                <div class="overlay">
+                    <h3>Purmamarca</h3>
+                </div>
+            </article>
+
+            <article class="card cultural">
+                <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal">
+                <div class="overlay">
+                    <h3>Hornocal</h3>
+                </div>
+            </article>
+
+            <article class="card gastronomico">
+                <img src="assets/img/destinos/gastronomia.jpg" alt="Gastronomía Jujeña">
+                <div class="overlay">
+                    <h3>Gastronomía Jujeña</h3>
+                </div>
+            </article>
+
+            <article class="card religioso">
+                <img src="assets/img/destinos/virgen-rio-blanco.jpg" alt="Virgen de Río Blanco">
+                <div class="overlay">
+                    <h3>Virgen de Río Blanco</h3>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!--TABLA-->
+    <section class="tabla-precios contenedor">
+        <h2>Precios de Destinos</h2>
+        <div class="tabla-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Categoría</th>
+                        <th>Duración</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Purmamarca</td>
+                        <td>Cultural</td>
+                        <td>1 día</td>
+                        <td>$50.000</td>
+                    </tr>
+                    <tr>
+                        <td>Salinas Grandes</td>
+                        <td>Naturaleza</td>
+                        <td>1 día</td>
+                        <td>$70.000</td>
+                    </tr>
+                    <tr>
+                        <td>Valle de la Luna</td>
+                        <td>Naturaleza</td>
+                        <td>2 días</td>
+                        <td>$100.000</td>
+                    </tr>
+                    <tr>
+                        <td>Hornocal</td>
+                        <td>Cultural</td>
+                        <td>1 día</td>
+                        <td>$90.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <!--FOOTER-->
+    <footer class="footer-bottom">
+        <p>&copy; 2026 Mega Turismo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
