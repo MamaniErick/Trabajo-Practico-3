@@ -19,89 +19,61 @@ body {
     line-height: 1.6;
     background-color: var(--color-claro);
 }
-
-/* ===== HEADER ===== */
+/************************/
+/*     ---HEADER----    */
+/************************/ 
 header {
-    background: var(--color-oscuro);
-    color: var(--color-blanco);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-}
-
-.menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.menu a {
-    color: var(--color-blanco);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
-    transition: background 0.3s ease;
-}
-
-.menu a:hover {
-    background: var(--color-primario);
-    border-radius: 5px;
-}
-
-.mega-content {
-    position: absolute;
-    top: 100%;
-    right: 0; 
-    background: var(--color-secundario);
-    min-width: 220px;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    display: none;
+    position: relative;
     z-index: 1000;
 }
 
-.mega-menu:hover .mega-content {
-    display: block;
+/*     ---NAVBAR----    */
+.navbar {
+    background: linear-gradient(135deg, #0097a7, #00bcd4);
+    padding: 1rem 0;
 }
 
-.mega-column {
-    display: flex;
-    flex-direction: column; 
+/* Marca */
+.navbar-brand {
+    font-size: 1.8rem;
+    color: var(--color-blanco);
+    transition: all 0.3s ease;
 }
 
-.mega-column a {
-    color: var(--color-oscuro);
-    padding: 12px 20px;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3s ease;
+.navbar-brand:hover {
+    transform: scale(1.05);
 }
 
-.mega-menu {
-    position: relative;
+/* Opciones Pantalla Grande */
+.navbar-nav .nav-link {
+    color: var(--color-blanco);
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        background: var(--color-oscuro);
-    }
-    .mega-content {
-        position: static;
-        width: 100%;
-        flex-direction: column;
-        box-shadow: none;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-    }
-    
-    .mega-menu:hover .mega-content {
-        display: flex;
-    }
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Botón Menu*/
+.navbar-toggler {
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+}
+
+/* Caja de opciones*/
+.dropdown-menu {
+    border: none;
+    border-radius: 15px;
+    min-width: 230px;
 }
 
 /*****HERO****/
