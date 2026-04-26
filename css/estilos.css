@@ -77,8 +77,14 @@ header {
 }
 
 /* FOOTER */
-footer{
+footer {
     background: linear-gradient(135deg, var(--color-primario), #00bcd4);
+    color: white;
+}
+
+footer p,
+footer h3 {
+    color: white;
 }
 
 .form-control:invalid:not(:placeholder-shown) {

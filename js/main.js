@@ -56,7 +56,15 @@ $(document).ready(function () {
 
     // Cada 10 segundos
     setInterval(cambiarSlide, 10000);
+    //FOOTER
+    let email = $(this).val().trim();
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    if (regex.test(email)) {
+        $(this).removeClass("is-invalid").addClass("is-valid");
+    } else {
+        $(this).removeClass("is-valid").addClass("is-invalid");
+    }
 
     // DESTINOS
     // AGENCIAS
