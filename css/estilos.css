@@ -100,117 +100,49 @@ footer{
 .form-control:focus {
     box-shadow: none;
 }
+
 /*****HERO****/
 .hero {
-    position: relative;
-    height: 90vh;
-    overflow: hidden;
+    min-height: 100vh;
 }
 
 .hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -50%); 
+    z-index: 1;
 }
 
 .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.55);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
+    z-index: 2;
 }
 
-.hero-content {
-    max-width: 800px;
-    padding: 20px;
+.hero .container {
+    z-index: 3;
 }
 
 .hero-title {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    animation: fadeInDown 1.5s ease-out;
+    color: var(--color-blanco);
+    line-height: 1.2;
+    text-wrap: balance;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;   
-    margin-bottom: 20px;
-    animation: fadeInUp 2s ease-out;
+    color: var(--color-blanco);
+    max-width: 700px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 .btn-hero {
-    display: inline-block;
-    padding: 12px 28px;
-    font-size: 1rem;
-    color: #fff;
-    background: #2547df;
-    border-radius: 5px;
-    text-decoration: none;
+    background: linear-gradient(135deg, var(--color-primario), #00bcd4);
+    border: 2px;
     transition: all 0.3s ease;
-    animation: fadeIn 2.5s ease-in-out;
 }
 
 .btn-hero:hover {
-    background: var(--color-primario);
-    transform: scale(1.05);
-}
-/*KEYFRAMES*/
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/*RESPONSIVE HERO*/
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .btn-hero {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
+    color: var(--color-blanco);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px ;
 }
 
 /*****DESTINOS DESTACADOS*****/

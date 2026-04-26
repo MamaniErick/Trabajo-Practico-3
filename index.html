@@ -68,18 +68,40 @@
             </div>
         </nav>
     </header>
-    <!--Sección HERO-->
-    <section class="hero">
-       <video class="hero-video" autoplay muted loop playsinline>
-        <source src="assets/video/hero.mp4" type="video/mp4">
-        Tu navegador no soporta videos HTML5.
-       </video> 
 
-       <div class="hero-overlay">
-            <h1 class="hero-content">Descubre las maravillas del Norte Argentino</h1>
-            <p class="hero-title">Explora paisajes únicos y vive experiencias inolvidables</p>
-            <a href="destinos.html" class="btn-hero">Explorar Destinos</a>
-       </div>
+    <!-- HERO -->
+    <section class="hero position-relative vh-100 overflow-hidden">
+        <!-- Video de fondo -->
+        <video
+            class="hero-video position-absolute top-50 start-50 translate-middle w-100 h-100"
+            autoplay
+            muted
+            loop
+            playsinline>
+            <source src="assets/video/hero.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+
+        <!-- Overlay -->
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <!-- Contenido -->
+        <div class="container position-relative h-100 d-flex align-items-center justify-content-center text-center text-white">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h1 class="hero-title display-3 fw-bold mb-4">
+                    Descubre las maravillas del Norte Argentino
+                </h1>
+
+                <p class="hero-subtitle lead mb-4 mx-auto">
+                    Explora paisajes únicos y vive experiencias inolvidables
+                </p>
+                <div class="d-none d-sm-inline-block">
+                    <a href="destinos.html" class="btn btn-hero btn-lg px-4 py-3 shadow">
+                        Explorar Destinos
+                    </a> 
+                </div>
+            </div>
+        </div>
     </section>
     <!--DESTINOS DESTACADOS-->
     <section class="destinos-destacados">
