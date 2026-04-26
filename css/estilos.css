@@ -207,131 +207,38 @@ footer{
     font-size: 1.1rem;
 }
 
-/*COMENTARIOS*/
-
+/****CARRUSEL***/
 .testimonios {
-    background: #f4f4f4;
+    background: var(--color-secundario);
     padding: 60px 20px;
     text-align: center;
 }
-
 .carrusel {
-    overflow: hidden;
     max-width: 800px;
-    width: 100%;
-    margin: 40px auto 0;
-    position: relative;
-}
-
-/* Pista del carrusel */
-.testimonios {
-    background: #f4f4f4;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.testimonios .contenedor {
-    max-width: 1200px;
     margin: auto;
-}
-
-.carrusel {
-    overflow: hidden;
-    max-width: 800px;
-    margin: 40px auto 0;
-    position: relative;
 }
 
 .carrusel-track {
     display: flex;
-    width:600px;
-    animation: slide 96s infinite ease-in-out;
-    font-size: 1.1rem;
+    transition: transform 0.8s ease;
 }
 
-/*Tarjetas*/
 .testimonio {
-    flex: 0 0 100%;
-    width: 100%;
-    background: #ffffff;
-    padding: 30px;
+    min-width: 100%;
+    padding: 40px;
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-.mensaje {
-    font-size: 1.1rem;
+.testimonio p {
     font-style: italic;
-    color: #333;
+    font-size: 1.2rem;
     margin-bottom: 15px;
-    line-height: 1.6;
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: break-word;
-    word-break: normal;
-    hyphens: auto;
 }
 
-.autor {
-    color: #023047;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.ubicacion {
-    color: #777;
-    font-size: 0.9rem;
-}
-
-@keyframes slide {
-    0%, 12% { transform: translateX(0); }
-    16%, 28% { transform: translateX(-100%); }
-    32%, 44% { transform: translateX(-200%); }
-    48%, 60% { transform: translateX(-300%); }
-    64%, 76% { transform: translateX(-400%); }
-    80%, 92% { transform: translateX(-500%); }
-    100% { transform: translateX(0); }
-}
-
-/* Pausar animación al pasar el cursor */
-.carrusel-track:hover {
-    animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .carrusel-track {
-        animation: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonio {
-        padding: 20px;
-    }
-
-    .mensaje {
-        font-size: 1rem;
-    }
-
-    .carrusel {
-        max-width: 95%;
-    }
-}
-
-@media (max-width: 480px) {
-    .mensaje {
-        font-size: 0.95rem;
-    }
-
-    .autor {
-        font-size: 0.9rem;
-    }
-
-    .ubicacion {
-        font-size: 0.85rem;
-    }
+.testimonio h4 {
+    color: var(--color-oscuro);
 }
 
 /****PAGINA AGENCIAS****/

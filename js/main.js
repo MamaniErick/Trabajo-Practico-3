@@ -37,6 +37,27 @@ $(document).ready(function () {
     // SIMULAR CUANDO CARGA LA PAGINA
     animarContador();
 
+    //ANIMACION DE CARRUSEL
+    let index = 0;
+    let total = $(".testimonio").length;
+
+    function cambiarSlide() {
+        index++;
+
+        if (index >= total) {
+            index = 0;
+        }
+
+        $(".carrusel-track").css(
+            "transform",
+            "translateX(" + (-index * 100) + "%)"
+        );
+    }
+
+    // Cada 10 segundos
+    setInterval(cambiarSlide, 10000);
+
+
     // DESTINOS
     // AGENCIAS
     // CONTACTO
