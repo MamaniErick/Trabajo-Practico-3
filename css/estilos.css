@@ -174,7 +174,7 @@ footer{
 
 /*CONTADOR*/
 .contador {
-    background: linear-gradient(rgba(2, 48, 71, 0.9), rgba(2, 48, 71, 0.9)),
+    background: linear-gradient(rgba(2, 48, 71, 0.685), rgba(2, 48, 71, 0.644)),
                 url("../assets/img/destinos/salinas.jpg") center/cover no-repeat;
     color: #ffffff;
     padding: 60px 20px;
@@ -193,47 +193,18 @@ footer{
 }
 
 .contador-item:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px) scale(1.05);
 }
 
-.numero {
+.contador-item .numero {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 10px;
     color: var(--color-primario);
-    animation: aparecer 2s ease-in-out;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .contador-item p {
     font-size: 1.1rem;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Animación escalonada */
-.contador-item:nth-child(1) .numero {
-    animation-delay: 0.2s;
-}
-
-.contador-item:nth-child(2) .numero {
-    animation-delay: 0.4s;
-}
-
-.contador-item:nth-child(3) .numero {
-    animation-delay: 0.6s;
-}
-
-.contador-item:nth-child(4) .numero {
-    animation-delay: 0.8s;
 }
 
 /*COMENTARIOS*/
