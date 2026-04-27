@@ -119,6 +119,9 @@ $(document).ready(function () {
 
   // CONTACTO
   // PRECIOS
+  $('[data-bs-toggle="tooltip"]').tooltip();
+  //pre
+ // $('[data-bs-toggle="tooltip"]').tooltip();
   // BLOG
   // PHISHING
 });
