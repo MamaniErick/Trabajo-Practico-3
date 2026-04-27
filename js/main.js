@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  
   //       HOME
   /*****************/
 
@@ -60,29 +59,26 @@ $(document).ready(function () {
 
   //     DESTINOS
   /******************/
-  $('input[name="categoria"]').on('change', function () {
+  $('input[name="categoria"]').on("change", function () {
+    const categoria = $(this).attr("id");
 
-      const categoria = $(this).attr('id');
-
-      if (categoria === 'todos') {
-          $('.destino-item').show();
-      } else {
-          $('.destino-item')
-              .hide()
-              .filter('.' + categoria)
-              .show();
-      }
-
+    if (categoria === "todos") {
+      $(".destino-item").show();
+    } else {
+      $(".destino-item")
+        .hide()
+        .filter("." + categoria)
+        .show();
+    }
   });
-  $('.destino-item').hover(
+  $(".destino-item").hover(
     function () {
-        $(this).find('img').stop().css('transform', 'scale(1.1)');
+      $(this).find("img").stop().css("transform", "scale(1.1)");
     },
     function () {
-        $(this).find('img').stop().css('transform', 'scale(1)');
-    }
+      $(this).find("img").stop().css("transform", "scale(1)");
+    },
   );
-
 
   //     AGENCIAS
   /******************/
@@ -113,7 +109,6 @@ $(document).ready(function () {
   //       PRECIOS
   /**********************/
   $('[data-bs-toggle="tooltip"]').tooltip();
-  
 
   //       CONTACTOS
   /**********************/
@@ -121,10 +116,47 @@ $(document).ready(function () {
   //QUE PUSE PARA EL FOOTER DEL HOMO, ESTA EN LA LINEA 52
   //DE MAIN.JS
 
-
   //       BLOG
   /**********************/
 
+  $(document).ready(function () {
+    // --- 1. FILTRO POR CATEGORÍAS ---
+    $('input[name="categoria-blog"]').on("change", function () {
+      let categoria = $(this).attr("id");
+
+      if (categoria === "todos") {
+        $(".blog-card").fadeIn(400);
+      } else {
+        $(".blog-card").hide(); // Oculta todas
+        $("." + categoria).fadeIn(400); // Muestra solo la elegida
+      }
+    });
+
+    // --- 2. ANIMACIÓN AL HACER SCROLL ---
+    function mostrarScroll() {
+      $(".reveal").each(function () {
+        let imagenTop = $(this).offset().top;
+        let ventanaTop = $(window).scrollTop();
+        let alturaVentana = $(window).height();
+
+        // Si el elemento entra en la zona visible
+        if (
+          imagenTop < ventanaTop + alturaVentana - 100 &&
+          imagenTop + $(this).height() > ventanaTop
+        ) {
+          $(this).addClass("active");
+        }
+        // CAMBIO AQUÍ: Si el elemento sale de la vista, le quitamos la clase
+        else {
+          $(this).removeClass("active");
+        }
+      });
+    }
+
+    // Se mantiene igual: ejecutar al scroll y al cargar
+    $(window).on("scroll", mostrarScroll);
+    mostrarScroll();
+  });
 
   //       PHISHING
   /**********************/

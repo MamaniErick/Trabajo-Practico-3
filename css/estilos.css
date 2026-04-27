@@ -20,7 +20,6 @@ body {
   background-color: var(--color-claro);
 }
 
-
 /************************/
 /*     ---HEADER----    */
 /************************/
@@ -114,36 +113,32 @@ footer h3 {
 /*---BANNER UNIVERSAL----*/
 /*************************/
 .banner-pagina {
-    min-height: clamp(220px, 35vw, 420px);
-    padding: clamp(40px, 6vw, 90px) 20px;
+  min-height: clamp(220px, 35vw, 420px);
+  padding: clamp(40px, 6vw, 90px) 20px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 
-    background:
-        linear-gradient(
-            rgba(0, 0, 0, 0.55),
-            rgba(0, 0, 0, 0.55)
-        ),
-        url("../assets/img/destinos/banner.jpg")
-        center center / cover no-repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/img/destinos/banner.jpg") center center / cover no-repeat;
 }
 
 .banner-pagina h1 {
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .banner-pagina p {
-    font-size: clamp(0.95rem, 1.8vw, 1.25rem);
-    max-width: 650px;
-    margin: 0 auto;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  max-width: 650px;
+  margin: 0 auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /************************/
@@ -268,19 +263,15 @@ footer h3 {
   padding: clamp(40px, 6vw, 90px) 20px;
   text-align: center;
   background:
-      linear-gradient(
-          rgba(0, 0, 0, 0.55),
-          rgba(0, 0, 0, 0.55)
-      ),
-      url("../assets/img/destinos/banner.jpg")
-      center center / cover no-repeat;
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../assets/img/destinos/banner.jpg") center center / cover no-repeat;
 }
 .testimonios h2 {
-    color: white;
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 50px;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 .carrusel {
   max-width: 800px;
@@ -462,84 +453,84 @@ footer h3 {
 }
 
 .galeria-masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 30px;
 }
 
 .destino-item {
-    width: 100%;
+  width: 100%;
 }
 
 .destino-item .card {
-    position: relative;
-    overflow: hidden;
-    border: none;
-    border-radius: 15px;
-    transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  border-radius: 15px;
+  transition: all 0.4s ease;
 }
 
 .destino-item .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 
 .destino-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.5s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
 .destino-item:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(2, 48, 71, 0.75);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 48, 71, 0.75);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .destino-item:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* RESPONSIVO */
 @media (max-width: 992px) {
-    .galeria-masonry {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .galeria-masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 576px) {
-    .galeria-masonry {
-        grid-template-columns: 1fr;
-    }
+  .galeria-masonry {
+    grid-template-columns: 1fr;
+  }
 }
 .tabla-precios {
   margin-top: 60px;
 }
 
 .table-responsive {
-    border-radius: 15px;
-    overflow: hidden;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .table tbody tr {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .table tbody tr:hover {
-    transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 /************************/
@@ -604,26 +595,32 @@ footer h3 {
   font-weight: 500;
 }
 
-
 /*****PAGINA BLOG*****/
 
+/* Layout del Grid */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin: 40px 0;
+  /* Esto crea las columnas automáticamente */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px; /* Espacio entre tarjetas */
+
+  /* CAMBIO AQUÍ: Margen a los costados */
+  padding: 20px 15px; /* 20px arriba/abajo y 15px a los lados */
+  max-width: 1200px; /* Para que en pantallas gigantes no se estiren infinito */
+  margin: 0 auto; /* Centra todo el bloque */
 }
 
+/* Espaciado interno de cada tarjeta */
 .blog-card {
-  background: #ffffff;
-  border-radius: 10px;
+  margin: 10px; /* Margen individual opcional para separar más las sombras */
+  background: white;
+  border-radius: 12px; /* Esquinas un poco más redondeadas para estilo revista */
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
 }
 
 .blog-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 
 .blog-card img {
@@ -636,32 +633,85 @@ footer h3 {
   padding: 15px;
 }
 
-.tag {
-  background: var(--color-primario);
-  color: white;
-  padding: 5px 10px;
-  font-size: 0.8rem;
-  border-radius: 5px;
+/* Animación de Scroll (Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
 }
 
-#cultura:checked ~ .blog-grid .blog-card:not(.cultura),
-#naturaleza:checked ~ .blog-grid .blog-card:not(.naturaleza),
-#aventura:checked ~ .blog-grid .blog-card:not(.aventura) {
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contenedor de los botones */
+.botones-filtro {
+  display: flex;
+  flex-direction: column; /* Apila los botones verticalmente por defecto (celular) */
+  gap: 10px; /* Espacio entre botones */
+  padding: 15px;
+  width: 100%; /* Que ocupen todo el ancho disponible */
+}
+
+/* Estilo de los botones (Labels) */
+.botones-filtro label {
+  display: block; /* Ocupa todo el renglón */
+  text-align: center; /* Centra el texto dentro del botón */
+  padding: 12px;
+  background-color: #f1f3f5;
+  border-radius: 50px; /* Mantiene el estilo píldora */
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Ocultamos los radios originales */
+input[name="categoria-blog"] {
   display: none;
 }
 
-#todos:checked ~ .blog-grid .blog-card {
-  display: block;
+/* --- LOGICA DE COLOR INDIVIDUAL --- */
+/* Cuando el radio de 'todos' está marcado, pintamos SOLO el label de 'todos' */
+#todos:checked ~ .botones-filtro label[for="todos"],
+#cultura:checked ~ .botones-filtro label[for="cultura"],
+#naturaleza:checked ~ .botones-filtro label[for="naturaleza"],
+#aventura:checked ~ .botones-filtro label[for="aventura"] {
+  background-color: #0d6efd; /* Azul Bootstrap */
+  color: white;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
 }
 
-@keyframes aparecer {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+/* Efecto hover para que se note que son clickeables */
+.botones-filtro label:hover {
+  background-color: #e2e2e2;
+}
+
+.titulo-seccion {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 25px 0 15px 0;
+  text-align: center; /* Alineado a la izquierda como en el diseño mobile */
+}
+
+@media (min-width: 768px) {
+  .titulo-seccion {
+    text-align: center; /* Centrado en pantallas grandes */
+    font-size: 2rem;
   }
-}
 
-@media (max-width: 768px) {
+  .botones-filtro {
+    flex-direction: row; /* En PC se ponen uno al lado del otro */
+    justify-content: center; /* Se centran horizontalmente */
+    flex-wrap: wrap; /* Si no entran, bajan a la siguiente línea */
+  }
+
+  .botones-filtro label {
+    display: inline-block;
+    width: auto; /* El ancho se adapta al texto */
+    padding: 8px 25px;
+  }
+
   .blog-card img {
     height: 180px;
   }
