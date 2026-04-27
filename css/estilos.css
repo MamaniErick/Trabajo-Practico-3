@@ -19,6 +19,8 @@ body {
   line-height: 1.6;
   background-color: var(--color-claro);
 }
+
+
 /************************/
 /*     ---HEADER----    */
 /************************/
@@ -75,9 +77,9 @@ header {
   border-radius: 15px;
   min-width: 230px;
 }
-/******************/
-/****  FOOTER  ****/
-/******************/
+/************************/
+/*     ---FOOTER----    */
+/************************/
 footer {
   background: linear-gradient(135deg, var(--color-primario), #00bcd4);
   color: white;
@@ -108,9 +110,9 @@ footer h3 {
   box-shadow: none;
 }
 
-/****************************/
-/****  BANNER UNIVERSAL  ****/
-/****************************/
+/*************************/
+/*---BANNER UNIVERSAL----*/
+/*************************/
 .banner-pagina {
     min-height: clamp(220px, 35vw, 420px);
     padding: clamp(40px, 6vw, 90px) 20px;
@@ -144,7 +146,9 @@ footer h3 {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/*****HERO****/
+/************************/
+/*     ---HERO----      */
+/************************/
 .hero {
   min-height: 100vh;
 }
@@ -188,7 +192,10 @@ footer h3 {
   box-shadow: 0 10px 25px;
 }
 
-/*****DESTINOS DESTACADOS*****/
+/************************/
+/*    ---DESTINOS----   */
+/*   ---DESTACADOS----  */
+/************************/
 .destino-card {
   transition: all 0.3s ease;
   overflow: hidden;
@@ -215,7 +222,9 @@ footer h3 {
   font-weight: bold;
 }
 
-/*CONTADOR*/
+/************************/
+/*   ---CONTADOR----    */
+/************************/
 .contador {
   background:
     linear-gradient(rgba(2, 48, 71, 0.685), rgba(2, 48, 71, 0.644)),
@@ -251,11 +260,27 @@ footer h3 {
   font-size: 1.1rem;
 }
 
-/****CARRUSEL***/
+/************************/
+/*   ---CARRUSEL----    */
+/************************/
 .testimonios {
-  background: var(--color-secundario);
-  padding: 60px 20px;
+  min-height: clamp(220px, 35vw, 420px);
+  padding: clamp(40px, 6vw, 90px) 20px;
   text-align: center;
+  background:
+      linear-gradient(
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0.55)
+      ),
+      url("../assets/img/destinos/banner.jpg")
+      center center / cover no-repeat;
+}
+.testimonios h2 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 .carrusel {
   max-width: 800px;
@@ -285,6 +310,9 @@ footer h3 {
   color: var(--color-oscuro);
 }
 
+/************************/
+/*   ---AGENCIAS----    */
+/************************/
 .agencias {
   padding: 60px 20px;
   text-align: center;
@@ -406,6 +434,176 @@ footer h3 {
     font-size: 2rem;
   }
 }
+
+/************************/
+/*   ---DESTINOS----    */
+/************************/
+.filtros input {
+  display: none;
+}
+
+.botones-filtro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.botones-filtro label {
+  background: #0077b6;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botones-filtro label:hover {
+  background: var(--color-primario);
+}
+
+.galeria-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 30px;
+}
+
+.destino-item {
+    width: 100%;
+}
+
+.destino-item .card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.destino-item .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.destino-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destino-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 48, 71, 0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.destino-item:hover .overlay {
+    opacity: 1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 992px) {
+    .galeria-masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .galeria-masonry {
+        grid-template-columns: 1fr;
+    }
+}
+.tabla-precios {
+  margin-top: 60px;
+}
+
+.table-responsive {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    transform: scale(1.01);
+}
+
+/************************/
+/*    ---PRECIOS----    */
+/************************/
+.precios {
+  padding: clamp(60px, 8vw, 100px) 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fbff, #eef7ff);
+}
+
+.tabla-responsive {
+  overflow-x: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.tabla-precios {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tabla-precios th,
+.tabla-precios td {
+  padding: clamp(12px, 2vw, 18px);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabla-precios th {
+  background: var(--color-oscuro);
+  color: white;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  border: none;
+}
+
+.tabla-precios td {
+  border-bottom: 1px solid #e9ecef;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+}
+
+.tabla-precios tbody tr {
+  transition: all 0.3s ease;
+}
+
+.tabla-precios tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.tabla-precios tbody tr:hover {
+  background: linear-gradient(135deg, #caf0f8, #ade8f4);
+  transform: scale(1.015);
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
+}
+
+.tabla-precios tbody tr:hover td {
+  color: #023047;
+  font-weight: 500;
+}
+
 
 /*****PAGINA BLOG*****/
 
@@ -644,169 +842,4 @@ footer h3 {
   .btn-enviar {
     grid-column: span 1;
   }
-}
-
-/****PAGINA DESTINOS******/
-.filtros input {
-  display: none;
-}
-
-.botones-filtro {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.botones-filtro label {
-  background: #0077b6;
-  color: white;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.botones-filtro label:hover {
-  background: var(--color-primario);
-}
-
-.galeria-masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 30px;
-}
-
-.destino-item {
-    width: 100%;
-}
-
-.destino-item .card {
-    position: relative;
-    overflow: hidden;
-    border: none;
-    border-radius: 15px;
-    transition: all 0.4s ease;
-}
-
-.destino-item .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-
-.destino-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.destino-item:hover img {
-    transform: scale(1.1);
-}
-
-.overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(2, 48, 71, 0.75);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.destino-item:hover .overlay {
-    opacity: 1;
-}
-
-/* RESPONSIVO */
-@media (max-width: 992px) {
-    .galeria-masonry {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .galeria-masonry {
-        grid-template-columns: 1fr;
-    }
-}
-.tabla-precios {
-  margin-top: 60px;
-}
-
-.table-responsive {
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.table tbody tr {
-    transition: all 0.3s ease;
-}
-
-.table tbody tr:hover {
-    transform: scale(1.01);
-}
-
-/*** PRECIOS ***/
-.precios {
-  padding: clamp(60px, 8vw, 100px) 20px;
-  text-align: center;
-  background: linear-gradient(135deg, #f8fbff, #eef7ff);
-}
-
-.tabla-responsive {
-  overflow-x: auto;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.tabla-precios {
-  width: 100%;
-  border-collapse: collapse;
-  background: #ffffff;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.tabla-precios th,
-.tabla-precios td {
-  padding: clamp(12px, 2vw, 18px);
-  text-align: center;
-  vertical-align: middle;
-}
-
-.tabla-precios th {
-  background: var(--color-oscuro);
-  color: white;
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  font-weight: 600;
-  border: none;
-}
-
-.tabla-precios td {
-  border-bottom: 1px solid #e9ecef;
-  font-size: clamp(0.9rem, 1.4vw, 1rem);
-}
-
-.tabla-precios tbody tr {
-  transition: all 0.3s ease;
-}
-
-.tabla-precios tbody tr:nth-child(even) {
-  background-color: #f8f9fa;
-}
-
-.tabla-precios tbody tr:hover {
-  background: linear-gradient(135deg, #caf0f8, #ade8f4);
-  transform: scale(1.015);
-  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
-}
-
-.tabla-precios tbody tr:hover td {
-  color: #023047;
-  font-weight: 500;
 }
