@@ -75,8 +75,9 @@ header {
   border-radius: 15px;
   min-width: 230px;
 }
-
-/* FOOTER */
+/******************/
+/****  FOOTER  ****/
+/******************/
 footer {
   background: linear-gradient(135deg, var(--color-primario), #00bcd4);
   color: white;
@@ -105,6 +106,42 @@ footer h3 {
 
 .form-control:focus {
   box-shadow: none;
+}
+
+/****************************/
+/****  BANNER UNIVERSAL  ****/
+/****************************/
+.banner-pagina {
+    min-height: clamp(220px, 35vw, 420px);
+    padding: clamp(40px, 6vw, 90px) 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../assets/img/destinos/banner.jpg")
+        center center / cover no-repeat;
+}
+
+.banner-pagina h1 {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner-pagina p {
+    font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+    max-width: 650px;
+    margin: 0 auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /*****HERO****/
@@ -246,16 +283,6 @@ footer h3 {
 
 .testimonio h4 {
   color: var(--color-oscuro);
-}
-
-/****PAGINA AGENCIAS****/
-.banner-pagina {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/img/destinos/salinas.jpg") center/cover;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
 }
 
 .agencias {
@@ -620,18 +647,6 @@ footer h3 {
 }
 
 /****PAGINA DESTINOS******/
-
-/**** PÁGINA DESTINOS ****/
-
-.banner-pagina {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/img/destinos/purmamarca.jpg") center/cover;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
 .filtros input {
   display: none;
 }
@@ -707,7 +722,7 @@ footer h3 {
     opacity: 1;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVO */
 @media (max-width: 992px) {
     .galeria-masonry {
         grid-template-columns: repeat(2, 1fr);
@@ -736,86 +751,62 @@ footer h3 {
     transform: scale(1.01);
 }
 
-/*****PAGINA PRECIOS*****/
-
+/*** PRECIOS ***/
 .precios {
-  padding: 60px 20px;
+  padding: clamp(60px, 8vw, 100px) 20px;
   text-align: center;
+  background: linear-gradient(135deg, #f8fbff, #eef7ff);
 }
 
 .tabla-responsive {
   overflow-x: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .tabla-precios {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .tabla-precios th,
 .tabla-precios td {
-  padding: 15px;
-  border: 1px solid #ddd;
+  padding: clamp(12px, 2vw, 18px);
   text-align: center;
+  vertical-align: middle;
 }
 
 .tabla-precios th {
-  background-color: #023047;
+  background: var(--color-oscuro);
   color: white;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 600;
+  border: none;
 }
 
-.tabla-precios tr:nth-child(even) {
-  background-color: #f2f2f2;
+.tabla-precios td {
+  border-bottom: 1px solid #e9ecef;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
 }
 
-/* Efecto hover */
+.tabla-precios tbody tr {
+  transition: all 0.3s ease;
+}
+
+.tabla-precios tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
 .tabla-precios tbody tr:hover {
-  background-color: #caf0f8;
-  transform: scale(1.01);
-  transition: 0.3s ease;
+  background: linear-gradient(135deg, #caf0f8, #ade8f4);
+  transform: scale(1.015);
+  box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
 }
 
-/*TOOLTIPS*/
-.tooltip {
-  position: relative;
-  cursor: pointer;
-  font-weight: bold;
-  margin-left: 5px;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 200px;
-  background-color: #023047;
-  color: #fff;
-  text-align: center;
-  padding: 6px;
-  border-radius: 5px;
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.8rem;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-/*RESPONSIVE*/
-@media (max-width: 768px) {
-  .tabla-precios th,
-  .tabla-precios td {
-    padding: 10px;
-    font-size: 0.9rem;
-  }
-
-  .banner-pagina h1 {
-    font-size: 2rem;
-  }
+.tabla-precios tbody tr:hover td {
+  color: #023047;
+  font-weight: 500;
 }
