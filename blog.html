@@ -1,190 +1,344 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog | Mega Turismo</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
     <!--HEADER-->
     <header>
-       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
-            <div class="container">
-                <!-- Logo -->
-                <a class="navbar-brand fw-bold" href="index.html">
-                    BLOG|Mega Turismo
-                </a>
-
-                <!-- Boton Menu-->
-                <button class="navbar-toggler border-0 shadow-none"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                        aria-label="Abrir menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menú para Pantallas Largas-->
-                <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">INICIO</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="destinos.html">Destinos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="agencias.html">Agencias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="precios.html">Precios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Menú para Pantalla chicas-->
-                <ul class="dropdown-menu dropdown-menu-end shadow-lg mt-2 d-lg-none">
-                    <li>
-                        <a class="dropdown-item" href="index.html">INICIO</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="destinos.html">Destinos</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="agencias.html">Agencias</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="precios.html">Precios</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>     
-    </header>
-    <!--BANNER-->
-    <section class="banner-pagina d-flex align-items-center justify-content-center text-center text-white">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow"
+      >
         <div class="container">
-            <h1 class="display-2 fw-bold mb-3">Blog de Destinos</h1>
-            <p class="lead fs-4 mb-0">
-                Descubre historias y experiencias unicas
-            </p>
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold" href="index.html">
+            BLOG|Mega Turismo
+          </a>
+
+          <!-- Boton Menu-->
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú para Pantallas Largas-->
+          <div
+            class="collapse navbar-collapse justify-content-end d-none d-lg-flex"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="destinos.html">Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agencias.html">Agencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precios.html">Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menú para Pantalla chicas-->
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg mt-2 d-lg-none">
+            <li>
+              <a class="dropdown-item" href="index.html">INICIO</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="destinos.html">Destinos</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="agencias.html">Agencias</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="precios.html">Precios</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="contacto.html">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </nav>
+    </header>
+
+    <!--BANNER-->
+    <section
+      class="banner-pagina d-flex align-items-center justify-content-center text-center text-white"
+    >
+      <div class="container">
+        <h1 class="display-2 fw-bold mb-3">Blog de Destinos</h1>
+        <p class="lead fs-4 mb-0">Descubre historias y experiencias unicas</p>
+      </div>
     </section>
     <!--FILTROS-->
     <section class="contenedor">
-        <h2 class="titulo-seccion">Explora por Categoría</h2>
-        <input type="radio" name="categoria-blog" id="todos" checked>
-        <input type="radio" name="categoria-blog" id="cultura">
-        <input type="radio" name="categoria-blog" id="naturaleza">
-        <input type="radio" name="categoria-blog" id="aventura">
+      <h2 class="titulo-seccion">Explora por Categoría</h2>
+      <input type="radio" name="categoria-blog" id="todos" checked />
+      <input type="radio" name="categoria-blog" id="cultura" />
+      <input type="radio" name="categoria-blog" id="naturaleza" />
+      <input type="radio" name="categoria-blog" id="aventura" />
 
-   
-        <div class="botones-filtro">
-            <label for="todos">Todos</label>
-            <label for="cultura">Cultura</label>
-            <label for="naturaleza">Naturaleza</label>
-            <label for="aventura">Aventura</label>
-        </div>
+      <div class="botones-filtro">
+        <label for="todos">Todos</label>
+        <label for="cultura">Cultura</label>
+        <label for="naturaleza">Naturaleza</label>
+        <label for="aventura">Aventura</label>
+      </div>
 
-        <!--BLOG GRID-->
-        <div class="blog-grid">
+      <!--BLOG GRID-->
+      <div class="blog-grid">
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+            <p>
+              Un destino icónico del norte argentino lleno de historia y
+              tradición.
+            </p>
+          </div>
+        </article>
 
-            <article class="blog-card cultura reveal">
-                <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca">
-                <div class="blog-contenido">
-                    <span class="tag">Cultura</span>
-                    <h3>Purmamarca y el Cerro de los Siete Colores</h3>
-                    <p>Un destino icónico del norte argentino lleno de historia y tradición.</p>
-                </div>
-            </article>
+        <article class="blog-card naturaleza reveal">
+          <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes" />
+          <div class="blog-contenido">
+            <span class="tag">Naturaleza</span>
+            <h3>La Magia de las Salinas Grandes</h3>
+            <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+          </div>
+        </article>
 
-            <article class="blog-card naturaleza reveal">
-                <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes">
-                <div class="blog-contenido">
-                    <span class="tag">Naturaleza</span>
-                    <h3>La Magia de las Salinas Grandes</h3>
-                    <p>Un espectáculo natural que deslumbra a cada visitante.</p>
-                </div>
-            </article>
+        <article class="blog-card aventura reveal">
+          <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal" />
+          <div class="blog-contenido">
+            <span class="tag">Aventura</span>
+            <h3>Explorando el Hornocal</h3>
+            <p>La montaña de los catorce colores, un destino imperdible.</p>
+          </div>
+        </article>
 
-            <article class="blog-card aventura reveal">
-                <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal">
-                <div class="blog-contenido">
-                    <span class="tag">Aventura</span>
-                    <h3>Explorando el Hornocal</h3>
-                    <p>La montaña de los catorce colores, un destino imperdible.</p>
-                </div>
-            </article>
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>El Valle de la Luna</h3>
+            <p>El paisaje que parece haber salido del mismo Marte.</p>
+          </div>
+        </article>
 
-            <article class="blog-card cultura reveal">
-                <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna">
-                <div class="blog-contenido">
-                    <span class="tag">Cultura</span>
-                    <h3>El Valle de la Luna</h3>
-                    <p>El paisaje que parece haber salido del mismo Marte.</p>
-                </div>
-            </article>
-        </div>
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+            <p>
+              Un destino icónico del norte argentino lleno de historia y
+              tradición.
+            </p>
+          </div>
+        </article>
+
+        <article class="blog-card naturaleza reveal">
+          <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes" />
+          <div class="blog-contenido">
+            <span class="tag">Naturaleza</span>
+            <h3>La Magia de las Salinas Grandes</h3>
+            <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+          </div>
+        </article>
+
+        <article class="blog-card aventura reveal">
+          <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal" />
+          <div class="blog-contenido">
+            <span class="tag">Aventura</span>
+            <h3>Explorando el Hornocal</h3>
+            <p>La montaña de los catorce colores, un destino imperdible.</p>
+          </div>
+        </article>
+
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>El Valle de la Luna</h3>
+            <p>El paisaje que parece haber salido del mismo Marte.</p>
+          </div>
+        </article>
+
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+            <p>
+              Un destino icónico del norte argentino lleno de historia y
+              tradición.
+            </p>
+          </div>
+        </article>
+
+        <article class="blog-card naturaleza reveal">
+          <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes" />
+          <div class="blog-contenido">
+            <span class="tag">Naturaleza</span>
+            <h3>La Magia de las Salinas Grandes</h3>
+            <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+          </div>
+        </article>
+
+        <article class="blog-card aventura reveal">
+          <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal" />
+          <div class="blog-contenido">
+            <span class="tag">Aventura</span>
+            <h3>Explorando el Hornocal</h3>
+            <p>La montaña de los catorce colores, un destino imperdible.</p>
+          </div>
+        </article>
+
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>El Valle de la Luna</h3>
+            <p>El paisaje que parece haber salido del mismo Marte.</p>
+          </div>
+        </article>
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+            <p>
+              Un destino icónico del norte argentino lleno de historia y
+              tradición.
+            </p>
+          </div>
+        </article>
+
+        <article class="blog-card naturaleza reveal">
+          <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes" />
+          <div class="blog-contenido">
+            <span class="tag">Naturaleza</span>
+            <h3>La Magia de las Salinas Grandes</h3>
+            <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+          </div>
+        </article>
+
+        <article class="blog-card aventura reveal">
+          <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal" />
+          <div class="blog-contenido">
+            <span class="tag">Aventura</span>
+            <h3>Explorando el Hornocal</h3>
+            <p>La montaña de los catorce colores, un destino imperdible.</p>
+          </div>
+        </article>
+
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>El Valle de la Luna</h3>
+            <p>El paisaje que parece haber salido del mismo Marte.</p>
+          </div>
+        </article>
+
+        <article class="blog-card cultura reveal">
+          <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca" />
+          <div class="blog-contenido">
+            <span class="tag">Cultura</span>
+            <h3>Purmamarca y el Cerro de los Siete Colores</h3>
+            <p>
+              Un destino icónico del norte argentino lleno de historia y
+              tradición.
+            </p>
+          </div>
+        </article>
+
+        <article class="blog-card naturaleza reveal">
+          <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes" />
+          <div class="blog-contenido">
+            <span class="tag">Naturaleza</span>
+            <h3>La Magia de las Salinas Grandes</h3>
+            <p>Un espectáculo natural que deslumbra a cada visitante.</p>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!--COMENTARIOS-->
     <section class="comentarios contenedor">
-        <h2 class="titulo-seccion">Comentarios de Viajeros</h2>
+      <h2 class="titulo-seccion">Comentarios de Viajeros</h2>
 
-        <div class="comentario">
-            <p>Un lugar mágico que volvería a visitar sin dudar.</p>
-            <h4>Cristiano Ronaldo</h4>
-        </div>
+      <div class="comentario">
+        <p>Un lugar mágico que volvería a visitar sin dudar.</p>
+        <h4>Cristiano Ronaldo</h4>
+      </div>
 
-        <div class="comentario">
-            <p>La cultura y los paisajes de Jujuy son incomparables.</p>
-            <h4>Lionel Messi</h4>
-        </div>
+      <div class="comentario">
+        <p>La cultura y los paisajes de Jujuy son incomparables.</p>
+        <h4>Lionel Messi</h4>
+      </div>
     </section>
+
     <!--FOOTER-->
     <footer class="pt-5 pb-3">
-        <div class="container-footer ms-5 me-5">
-            <div class="row g-4">
-                <!-- Redes Sociales -->
-                <div class="col-lg-4  text-center class=col-10 col-md-6 col-lg-4 mx-auto mt-4">
-                    <h3 class="mb-3">Síguenos</h3>
+      <div class="container-footer ms-5 me-5">
+        <div class="row g-4">
+          <!-- Redes Sociales -->
+          <div
+            class="col-lg-4 text-center class=col-10 col-md-6 col-lg-4 mx-auto mt-4"
+          >
+            <h3 class="mb-3">Síguenos</h3>
 
-                    <div class="d-flex justify-content-center gap-3">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="bi bi-facebook"></i>
-                        </a>
+            <div class="d-flex justify-content-center gap-3">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
 
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="bi bi-instagram"></i>
-                        </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
 
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="bi bi-twitter-x"></i>
-                        </a>
+              <a href="#" class="social-icon" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
 
-                        <a href="#" class="social-icon" aria-label="YouTube">
-                            <i class="bi bi-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="class=col-10 col-md-6 col-lg-4 mx-auto mt-4 text-center">
-                    <p class="mb-0">
-                        &copy; 2026 Mega Turismo. Todos los derechos reservados.
-                    </p>
-                </div>   
+              <a href="#" class="social-icon" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
             </div>
+          </div>
+          <div class="class=col-10 col-md-6 col-lg-4 mx-auto mt-4 text-center">
+            <p class="mb-0">
+              &copy; 2026 Mega Turismo. Todos los derechos reservados.
+            </p>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
