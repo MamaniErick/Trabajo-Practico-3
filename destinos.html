@@ -75,7 +75,7 @@
     </section>
 
     <!--FILTRAR-->
-    <section class="filtros contenedor">
+    <section class="filtros contenedor text-center">
         <h2>Filtrar por categoría</h2>
 
         <input type="radio" name="categoria" id="todos" checked>
@@ -91,59 +91,70 @@
             <label for="gastronomico">Gastronómico</label>
             <label for="religioso">Religioso</label>
         </div>
-        <div class="galeria">
-
-            <article class="card naturaleza">
-                <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna">
-                <div class="overlay">
-                    <h3>Valle de la Luna</h3>
+        <div class="galeria-masonry">
+            <article class="destino-item naturaleza">
+                <div class="card">
+                    <img src="assets/img/destinos/valle.jpg" alt="Valle de la Luna">
+                    <div class="overlay">
+                        <h3>Valle de la Luna</h3>
+                    </div>
                 </div>
             </article>
 
-            <article class="card naturaleza">
-                <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes">
-                <div class="overlay">
-                    <h3>Salinas Grandes</h3>
+            <article class="destino-item naturaleza">
+                <div class="card">
+                    <img src="assets/img/destinos/salinas.jpg" alt="Salinas Grandes">
+                    <div class="overlay">
+                        <h3>Salinas Grandes</h3>
+                    </div>
                 </div>
             </article>
 
-            <article class="card cultural">
-                <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca">
-                <div class="overlay">
-                    <h3>Purmamarca</h3>
+            <article class="destino-item cultural">
+                <div class="card">
+                    <img src="assets/img/destinos/purmamarca.jpg" alt="Purmamarca">
+                    <div class="overlay">
+                        <h3>Purmamarca</h3>
+                    </div>
                 </div>
             </article>
 
-            <article class="card cultural">
-                <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal">
-                <div class="overlay">
-                    <h3>Hornocal</h3>
+            <article class="destino-item cultural">
+                <div class="card">
+                    <img src="assets/img/destinos/hornocal.jpg" alt="Hornocal">
+                    <div class="overlay">
+                        <h3>Hornocal</h3>
+                    </div>
                 </div>
             </article>
 
-            <article class="card gastronomico">
-                <img src="assets/img/destinos/gastronomia.jpg" alt="Gastronomía Jujeña">
-                <div class="overlay">
-                    <h3>Gastronomía Jujeña</h3>
+            <article class="destino-item gastronomico">
+                <div class="card">
+                    <img src="assets/img/destinos/gastronomia.jpg" alt="Gastronomía Jujeña">
+                    <div class="overlay">
+                        <h3>Gastronomía Jujeña</h3>
+                    </div>
                 </div>
             </article>
 
-            <article class="card religioso">
-                <img src="assets/img/destinos/virgen-rio-blanco.jpg" alt="Virgen de Río Blanco">
-                <div class="overlay">
-                    <h3>Virgen de Río Blanco</h3>
+            <article class="destino-item religioso">
+                <div class="card">
+                    <img src="assets/img/destinos/virgen-rio-blanco.jpg" alt="Virgen de Río Blanco">
+                    <div class="overlay">
+                        <h3>Virgen de Río Blanco</h3>
+                    </div>
                 </div>
             </article>
-
         </div>
     </section>
 
     <!--TABLA-->
-    <section class="tabla-precios contenedor">
-        <h2>Precios de Destinos</h2>
-        <div class="tabla-responsive">
-            <table>
-                <thead>
+    <section class="tabla-precios container py-5">
+        <h2 class="text-center mb-4">Precios de Destinos</h2>
+
+        <div class="table-responsive shadow rounded">
+            <table class="table table-hover table-striped align-middle mb-0">
+                <thead class="table-primary">
                     <tr>
                         <th>Destino</th>
                         <th>Categoría</th>

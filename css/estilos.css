@@ -621,6 +621,8 @@ footer h3 {
 
 /****PAGINA DESTINOS******/
 
+/**** PÁGINA DESTINOS ****/
+
 .banner-pagina {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -653,97 +655,85 @@ footer h3 {
   background: var(--color-primario);
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: 200px;
-  gap: 15px;
+.galeria-masonry {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 30px;
 }
 
-.card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
+.destino-item {
+    width: 100%;
 }
 
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s;
+.destino-item .card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.4s ease;
 }
 
-.card:hover img {
-  transform: scale(1.1);
+.destino-item .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.destino-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destino-item:hover img {
+    transform: scale(1.1);
 }
 
 .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(2, 48, 71, 0.7);
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 48, 71, 0.75);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
-.card:hover .overlay {
-  opacity: 1;
+.destino-item:hover .overlay {
+    opacity: 1;
 }
 
-/* Efecto Masonry */
-.card:nth-child(2),
-.card:nth-child(5) {
-  grid-row: span 2;
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .galeria-masonry {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-#cultural:checked ~ .galeria .card:not(.cultural),
-#naturaleza:checked ~ .galeria .card:not(.naturaleza),
-#gastronomico:checked ~ .galeria .card:not(.gastronomico),
-#religioso:checked ~ .galeria .card:not(.religioso) {
-  display: none;
+@media (max-width: 576px) {
+    .galeria-masonry {
+        grid-template-columns: 1fr;
+    }
 }
-
-#todos:checked ~ .galeria .card {
-  display: block;
-}
-
-th,
-td {
-  padding: 12px;
-  border: 1px solid #ddd;
-}
-
-th {
-  background: var(--color-primario);
-  color: white;
-}
-
 .tabla-precios {
-  margin: 60px auto;
-  text-align: center;
+  margin-top: 60px;
 }
 
-.tabla-responsive {
-  overflow-x: auto;
+.table-responsive {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
+.table tbody tr {
+    transition: all 0.3s ease;
 }
 
-tr:hover {
-  background: #f1f1f1;
-}
-
-@media (max-width: 768px) {
-  .banner-pagina h1 {
-    font-size: 2rem;
-  }
+.table tbody tr:hover {
+    transform: scale(1.01);
 }
 
 /*****PAGINA PRECIOS*****/

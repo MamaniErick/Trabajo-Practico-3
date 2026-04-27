@@ -65,7 +65,29 @@ $(document).ready(function () {
     $(this).removeClass("is-valid").addClass("is-invalid");
   }
 
-  // DESTINOS
+  //DESTINOS
+  $('input[name="categoria"]').on('change', function () {
+
+      const categoria = $(this).attr('id');
+
+      if (categoria === 'todos') {
+          $('.destino-item').show();
+      } else {
+          $('.destino-item')
+              .hide()
+              .filter('.' + categoria)
+              .show();
+      }
+
+  });
+  $('.destino-item').hover(
+    function () {
+        $(this).find('img').stop().css('transform', 'scale(1.1)');
+    },
+    function () {
+        $(this).find('img').stop().css('transform', 'scale(1)');
+    }
+  );
   // AGENCIAS
 
   $(document).ready(function () {
