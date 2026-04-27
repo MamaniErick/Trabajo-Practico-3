@@ -75,8 +75,9 @@ header {
   border-radius: 15px;
   min-width: 230px;
 }
-
-/* FOOTER */
+/******************/
+/****  FOOTER  ****/
+/******************/
 footer {
   background: linear-gradient(135deg, var(--color-primario), #00bcd4);
   color: white;
@@ -105,6 +106,42 @@ footer h3 {
 
 .form-control:focus {
   box-shadow: none;
+}
+
+/****************************/
+/****  BANNER UNIVERSAL  ****/
+/****************************/
+.banner-pagina {
+    min-height: clamp(220px, 35vw, 420px);
+    padding: clamp(40px, 6vw, 90px) 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("../assets/img/destinos/banner.jpg")
+        center center / cover no-repeat;
+}
+
+.banner-pagina h1 {
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.banner-pagina p {
+    font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+    max-width: 650px;
+    margin: 0 auto;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 /*****HERO****/
@@ -246,16 +283,6 @@ footer h3 {
 
 .testimonio h4 {
   color: var(--color-oscuro);
-}
-
-/****PAGINA AGENCIAS****/
-.banner-pagina {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/img/destinos/salinas.jpg") center/cover;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
 }
 
 .agencias {
@@ -620,18 +647,6 @@ footer h3 {
 }
 
 /****PAGINA DESTINOS******/
-
-/**** PÁGINA DESTINOS ****/
-
-.banner-pagina {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/img/destinos/purmamarca.jpg") center/cover;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
 .filtros input {
   display: none;
 }
@@ -707,7 +722,7 @@ footer h3 {
     opacity: 1;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVO */
 @media (max-width: 992px) {
     .galeria-masonry {
         grid-template-columns: repeat(2, 1fr);
