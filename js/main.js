@@ -116,6 +116,118 @@ $(document).ready(function () {
   //QUE PUSE PARA EL FOOTER DEL HOMO, ESTA EN LA LINEA 52
   //DE MAIN.JS
 
+  $(document).ready(function () {
+    // 1. FUNCIÓN DE VALIDACIÓN (Incluye tu Regex de correo)
+    function validarCampo(campo) {
+      let valor = $(campo).val().trim();
+      let id = $(campo).attr("id");
+      let esValido = false;
+
+      // --- TU VALIDACIÓN DE CORREO ---
+      if (id === "email") {
+        let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        esValido = regex.test(valor);
+      }
+      // --- VALIDACIÓN DE TELÉFONO (Exactamente 10 números) ---
+      else if (id === "telefono") {
+        let regexTel = /^[0-9]{10}$/;
+        esValido = regexTel.test(valor);
+      }
+      // --- VALIDACIÓN DE DESTINO (Select) ---
+      else if (id === "destino") {
+        esValido = valor !== "";
+      }
+      // --- VALIDACIÓN GENERAL (Nombre y Mensaje) ---
+      else {
+        esValido = valor.length >= 3;
+      }
+
+      // Aplicamos clases visuales (is-valid de Bootstrap + tus clases de borde)
+      if (esValido) {
+        $(campo)
+          .removeClass("is-invalid error-input")
+          .addClass("is-valid valido-input");
+      } else {
+        $(campo)
+          .removeClass("is-valid valido-input")
+          .addClass("is-invalid error-input");
+      }
+
+      return esValido;
+    }
+
+    // 2. VALIDACIÓN EN TIEMPO REAL (.on('input'))
+    // Esto hace que los bordes cambien mientras el usuario escribe
+    $(".formulario input, .formulario textarea, .formulario select").on(
+      "input change blur",
+      function () {
+        validarCampo($(this));
+      },
+    );
+
+    // 3. EVENTO DE ENVÍO (SUBMIT)
+    $(".formulario").on("submit", function (e) {
+      e.preventDefault(); // Detiene el envío real para mostrar la animación
+
+      let todoValido = true;
+
+      // Verificamos todos los campos una última vez
+      $(".formulario input, .formulario textarea, .formulario select").each(
+        function () {
+          if (!validarCampo($(this))) {
+            todoValido = false;
+          }
+        },
+      );
+
+      if (todoValido) {
+        const $btn = $(".btn-enviar");
+        const $spinner = $(".spinner");
+
+        // --- ESTADO DE CARGA ---
+        $btn.prop("disabled", true).addClass("cargando");
+        $spinner.show(); // Muestra el <span class="spinner"></span>
+
+        // Cambiamos el texto del botón sin borrar el span
+        const textoOriginal = $btn.contents().first().text();
+        $btn.contents().first()[0].textContent = "Enviando... ";
+
+        // --- RETRASO SIMULADO (2 SEGUNDOS) ---
+        setTimeout(function () {
+          // Restauramos el botón
+          $spinner.hide();
+          $btn.prop("disabled", false).removeClass("cargando");
+          $btn.contents().first()[0].textContent = textoOriginal;
+
+          // --- MOSTRAR MODAL DE CONFIRMACIÓN ---
+          $("#modal-confirmacion").css("display", "flex").hide().fadeIn();
+
+          // Limpiamos el formulario y los bordes de colores
+          $(".formulario")[0].reset();
+          $(
+            ".formulario input, .formulario textarea, .formulario select",
+          ).removeClass("is-valid valido-input");
+        }, 2000);
+      } else {
+        // Opcional: un aviso si intentan enviar con errores
+        console.log("Formulario inválido");
+      }
+    });
+
+    // 4. LÓGICA PARA CERRAR EL MODAL
+    $(".btn-cerrar").on("click", function (e) {
+      e.preventDefault();
+      $("#modal-confirmacion").fadeOut();
+    });
+
+    // Cerrar si hacen clic fuera del cuadro blanco
+    $(window).on("click", function (e) {
+      if ($(e.target).is("#modal-confirmacion")) {
+        $("#modal-confirmacion").fadeOut();
+      }
+    });
+  });
+  
   //       BLOG
   /**********************/
 
