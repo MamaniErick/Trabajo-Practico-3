@@ -1,18 +1,16 @@
 $(document).ready(function () {
-  // HOME
-  // Ocultar elementos inicialmente
-  $(".hero-title, .hero-subtitle, .btn-hero").hide();
+  
+  //       HOME
+  /*****************/
 
-  // Animaciones
+  //Ocultar elementos inicialmente
   $(".hero-title, .hero-subtitle, .btn-hero").hide();
-
+  //Animaciones
+  $(".hero-title, .hero-subtitle, .btn-hero").hide();
   $(".hero-title").fadeIn(1200);
-
   $(".hero-subtitle").delay(600).fadeIn(1200);
-
   $(".btn-hero").delay(1200).fadeIn(1200);
-
-  //FUNCION DE AMIMACION DE CONTADORES
+  //Funcion de Contadores
   function animarContador() {
     $(".numero").each(function () {
       let $this = $(this);
@@ -35,14 +33,11 @@ $(document).ready(function () {
       );
     });
   }
-
-  // SIMULAR CUANDO CARGA LA PAGINA
+  //Simular cuando la pagina se carga
   animarContador();
-
-  //ANIMACION DE CARRUSEL
+  //Animacion Carrusel
   let index = 0;
   let total = $(".testimonio").length;
-
   function cambiarSlide() {
     index++;
 
@@ -52,20 +47,19 @@ $(document).ready(function () {
 
     $(".carrusel-track").css("transform", "translateX(" + -index * 100 + "%)");
   }
-
   // Cada 10 segundos
   setInterval(cambiarSlide, 10000);
-  //FOOTER
+  //Validar formulario
   let email = $(this).val().trim();
   let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
   if (regex.test(email)) {
     $(this).removeClass("is-invalid").addClass("is-valid");
   } else {
     $(this).removeClass("is-valid").addClass("is-invalid");
   }
 
-  //DESTINOS
+  //     DESTINOS
+  /******************/
   $('input[name="categoria"]').on('change', function () {
 
       const categoria = $(this).attr('id');
@@ -88,40 +82,50 @@ $(document).ready(function () {
         $(this).find('img').stop().css('transform', 'scale(1)');
     }
   );
-  // AGENCIAS
 
-  $(document).ready(function () {
-    // Giro de la carta
-    $(".tarjeta-flip").on("click", function () {
-      $(this).find(".tarjeta-inner").toggleClass("girada");
+
+  //     AGENCIAS
+  /******************/
+  // Giro de la carta
+  $(".tarjeta-flip").on("click", function () {
+    $(this).find(".tarjeta-inner").toggleClass("girada");
+  });
+  // Lógica de estrellas
+  $(".estrella").on("click", function (e) {
+    e.stopPropagation(); // BLOQUEA el giro de la carta al calificar
+
+    let valor = $(this).data("value");
+    let contenedor = $(this).parent();
+
+    // Quitamos el amarillo fijo anterior
+    contenedor.find(".estrella").removeClass("activa");
+
+    // Pintamos de amarillo fijo hasta la estrella clicqueada
+    contenedor.find(".estrella").each(function () {
+      if ($(this).data("value") <= valor) {
+        $(this).addClass("activa");
+      }
     });
 
-    // Lógica de estrellas
-    $(".estrella").on("click", function (e) {
-      e.stopPropagation(); // BLOQUEA el giro de la carta al calificar
-
-      let valor = $(this).data("value");
-      let contenedor = $(this).parent();
-
-      // Quitamos el amarillo fijo anterior
-      contenedor.find(".estrella").removeClass("activa");
-
-      // Pintamos de amarillo fijo hasta la estrella clicqueada
-      contenedor.find(".estrella").each(function () {
-        if ($(this).data("value") <= valor) {
-          $(this).addClass("activa");
-        }
-      });
-
-      console.log("Votaste con: " + valor);
-    });
+    console.log("Votaste con: " + valor);
   });
 
-  // CONTACTO
-  // PRECIOS
+  //       PRECIOS
+  /**********************/
   $('[data-bs-toggle="tooltip"]').tooltip();
-  //pre
- // $('[data-bs-toggle="tooltip"]').tooltip();
-  // BLOG
-  // PHISHING
+  
+
+  //       CONTACTOS
+  /**********************/
+  //NICO SI QUERES PROBAR EL CODIFO PARA VALIDAR CORREO
+  //QUE PUSE PARA EL FOOTER DEL HOMO, ESTA EN LA LINEA 52
+  //DE MAIN.JS
+
+
+  //       BLOG
+  /**********************/
+
+
+  //       PHISHING
+  /**********************/
 });
