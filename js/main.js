@@ -112,10 +112,6 @@ $(document).ready(function () {
 
   //       CONTACTOS
   /**********************/
-  //NICO SI QUERES PROBAR EL CODIFO PARA VALIDAR CORREO
-  //QUE PUSE PARA EL FOOTER DEL HOMO, ESTA EN LA LINEA 52
-  //DE MAIN.JS
-
   $(document).ready(function () {
     // 1. FUNCIÓN DE VALIDACIÓN (Incluye tu Regex de correo)
     function validarCampo(campo) {
@@ -272,4 +268,32 @@ $(document).ready(function () {
 
   //       PHISHING
   /**********************/
+
+  //     MODO OSCURO  
+  /**********************/
+  const body = document.body;
+  const modeToggle = document.getElementById('modeToggle');
+  const icono = modeToggle.querySelector('i');
+
+  //Cargar tema guardado
+  const modoGuardado = localStorage.getItem('mode');
+
+  if (modoGuardado === 'dark') {
+      body.classList.add('dark-mode');
+      icono.className = 'bi bi-sun-fill';
+  } else {
+      icono.className = 'bi bi-moon-fill';
+  }
+
+  //Cambiar tema al hacer clic
+  modeToggle.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark-mode');
+
+      localStorage.setItem('mode', isDark ? 'dark' : 'light');
+
+      icono.className = isDark
+          ? 'bi bi-sun-fill'
+          : 'bi bi-moon-fill';
+  });
+
 });

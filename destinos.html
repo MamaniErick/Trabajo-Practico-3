@@ -9,15 +9,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
-<body>
+<body class="modo-claro">
     <header>
        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow">
+            <button id="modeToggle" class="btn btn-outline-light ms-2" aria-label="Cambiar tema">
+                    <i class="bi bi-moon-fill"></i>
+            </button> 
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand fw-bold" href="index.html">
                     DESTINOS|Mega Turismo
                 </a>
-
                 <!-- Boton Menu-->
                 <button class="navbar-toggler border-0 shadow-none"
                         type="button"
@@ -80,7 +82,7 @@
     </section>
     
     <!--FILTRAR-->
-    <section class="filtros contenedor text-center">
+    <section class="filtros contenedor text-center pt-2 pb-3">
         <h2>Filtrar por categoría</h2>
 
         <input type="radio" name="categoria" id="todos" checked>

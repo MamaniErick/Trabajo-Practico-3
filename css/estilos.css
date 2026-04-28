@@ -5,6 +5,8 @@
   --color-oscuro: #1597d3;
   --color-claro: #f8f9fa;
   --color-blanco: #ffffff;
+  --color-terciario:#00bcd4;
+  --color-negro:#000000;
 }
 
 /*Estilos Generales*/
@@ -18,6 +20,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   background-color: var(--color-claro);
+  color: var(--color-negro);
+  transition: background-color 1.3s, color 0.3s;
+}
+
+.dark-mode{
+  --color-primario: #000000;
+  --color-secundario: #cfcfcf;
+  --color-oscuro: #cfcfcf;
+  --color-claro: #3f3e3e;
+  --color-blanco: #ffffff;
+  --color-terciario:#000000;
+  --color-negro:#fffdfd;
+}
+#modeToggle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+#modeToggle:hover {
+    transform: rotate(20deg) scale(1.1);
+}
+.dark-mode #modeToggle{
+  background-color: #f5f5f5;
+  color: #3f3e3e;
 }
 
 /************************/
@@ -30,7 +63,7 @@ header {
 
 /*     ---NAVBAR----    */
 .navbar {
-  background: linear-gradient(135deg, var(--color-primario), #00bcd4);
+  background: linear-gradient(135deg, var(--color-primario), var(--color-terciario));
   padding: 1rem 0;
 }
 
@@ -57,7 +90,7 @@ header {
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--color-claro);
   transform: translateY(-2px);
 }
 
@@ -80,13 +113,15 @@ header {
 /*     ---FOOTER----    */
 /************************/
 footer {
-  background: linear-gradient(135deg, var(--color-primario), #00bcd4);
-  color: white;
+  background: linear-gradient(135deg, var(--color-primario), var(--color-terciario));
+  color: var(--color-blanco);
 }
-
+#text-dark{
+  color:var(--color-negro);
+}
 footer p,
 footer h3 {
-  color: white;
+  color: var(--color-blanco);
 }
 
 .form-control:invalid:not(:placeholder-shown) {
@@ -120,7 +155,7 @@ footer h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: var(--color-blanco);
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -131,7 +166,7 @@ footer h3 {
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 10px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 4px 15px rgb(0, 0, 0, 0.5);
 }
 
 .banner-pagina p {
@@ -176,7 +211,7 @@ footer h3 {
 }
 
 .btn-hero {
-  background: linear-gradient(135deg, var(--color-primario), #00bcd4);
+  background: linear-gradient(135deg, var(--color-primario),var(--color-terciario));
   border: 2px;
   transition: all 0.3s ease;
 }
@@ -191,7 +226,11 @@ footer h3 {
 /*    ---DESTINOS----   */
 /*   ---DESTACADOS----  */
 /************************/
+.destinos-destacados{
+  background: var(--color-claro);
+}
 .destino-card {
+  background: linear-gradient(135deg,var(--color-claro), var(--color-claro));
   transition: all 0.3s ease;
   overflow: hidden;
   border-radius: 12px;
@@ -205,22 +244,43 @@ footer h3 {
 
 .destino-card:hover {
   transform: translateY(-8px);
-  background: linear-gradient(135deg, #16cce4f6, var(--color-primario));
+  background: linear-gradient(135deg,var(--color-primario), var(--color-terciario));
 }
 
 .destino-card:hover img {
   transform: scale(1.1);
 }
 
-.card-title {
-  color: var(--color-oscuro);
-  font-weight: bold;
+.destinos-destacados h2 {
+  color: var(--color-negro);
 }
 
+.destinos-destacados .container > p {
+  color: var(--color-negro);
+  font-size: 1.1rem;
+}
+
+.destinos-destacados .card-text {
+    color: var(--color-negro);
+    font-size: 0.95rem;
+}
+
+.destinos-destacados > .container > p {
+    color: var(--color-negro);
+}
+
+.destinos-destacados .card-title {
+    color: var(--color-negro);
+    font-weight: bold;
+}
+
+.destinos-destacados .card-text {
+    color: var(--color-negro);
+}
 /************************/
 /*   ---CONTADOR----    */
 /************************/
-.contador {
+.contador .contenedor{
   background:
     linear-gradient(rgba(2, 48, 71, 0.685), rgba(2, 48, 71, 0.644)),
     url("../assets/img/destinos/salinas.jpg") center/cover no-repeat;
@@ -267,7 +327,7 @@ footer h3 {
     url("../assets/img/destinos/banner.jpg") center center / cover no-repeat;
 }
 .testimonios h2 {
-  color: white;
+  color: var(--color-blanco);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 700;
   margin-bottom: 50px;
@@ -286,12 +346,13 @@ footer h3 {
 .testimonio {
   min-width: 100%;
   padding: 40px;
-  background: #fff;
+  background: var(--color-claro);
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .testimonio p {
+  color: var(--color-negro);
   font-style: italic;
   font-size: 1.2rem;
   margin-bottom: 15px;
@@ -301,14 +362,20 @@ footer h3 {
   color: var(--color-oscuro);
 }
 
+.testimonio span {
+  color: var(--color-negro);
+}
 /************************/
 /*   ---AGENCIAS----    */
 /************************/
 .agencias {
+  background: var(--color-claro);
   padding: 60px 20px;
   text-align: center;
 }
-
+.agencias h2{
+  color: var(--color-negro)
+}
 .grid-agencias {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -351,7 +418,11 @@ footer h3 {
 }
 
 .tarjeta-frente {
-  background-color: #ffffff;
+  background-color: var(--color-terciario);
+}
+
+.tarjeta-frente h3{
+  color: var(--color-negro);
 }
 
 .tarjeta-frente img {
@@ -363,8 +434,8 @@ footer h3 {
 }
 
 .tarjeta-reverso {
-  background-color: #0d6efd; /* Azul Bootstrap */
-  color: white;
+  background-color: var(--color-oscuro); /* Azul Bootstrap */
+  color: var(--color-claro);
   transform: rotateY(180deg);
 }
 
@@ -380,7 +451,7 @@ footer h3 {
 
 .estrella {
   font-size: 1.8rem;
-  color: #ccc; /* Gris inicial */
+  color: var(--color-claro); /* Gris inicial */
   cursor: pointer;
   transition: color 0.1s ease-in-out;
 }
@@ -392,7 +463,7 @@ footer h3 {
 
 /* Truco CSS: Las que están después de la estrella bajo el mouse vuelven a gris */
 .contenedor-rating .estrella:hover ~ .estrella {
-  color: #ccc;
+  color: var(--color-claro);
 }
 
 /* Clase fija al hacer clic (Gestionada por jQuery) */
@@ -429,6 +500,14 @@ footer h3 {
 /************************/
 /*   ---DESTINOS----    */
 /************************/
+.filtros {
+  background: var(--color-claro);
+}
+
+.filtros h2{
+  color: var(--color-negro);
+}
+
 .filtros input {
   display: none;
 }
@@ -439,17 +518,12 @@ footer h3 {
 }
 
 .botones-filtro label {
-  background: #0077b6;
-  color: white;
+  color: black;
   padding: 10px 15px;
   margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.botones-filtro label:hover {
-  background: var(--color-primario);
 }
 
 .galeria-masonry {
@@ -492,7 +566,7 @@ footer h3 {
   position: absolute;
   inset: 0;
   background: rgba(2, 48, 71, 0.75);
-  color: white;
+  color: var(--color-blanco);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -516,9 +590,7 @@ footer h3 {
     grid-template-columns: 1fr;
   }
 }
-.tabla-precios {
-  margin-top: 60px;
-}
+
 
 .table-responsive {
   border-radius: 15px;
@@ -539,9 +611,11 @@ footer h3 {
 .precios {
   padding: clamp(60px, 8vw, 100px) 20px;
   text-align: center;
-  background: linear-gradient(135deg, #f8fbff, #eef7ff);
+  background: var(--color-claro)
 }
-
+.precios h2{
+  color: var(--color-negro)
+}
 .tabla-responsive {
   overflow-x: auto;
   border-radius: 20px;
@@ -551,7 +625,7 @@ footer h3 {
 .tabla-precios {
   width: 100%;
   border-collapse: collapse;
-  background: #ffffff;
+  background: var(--color-blanco);
   border-radius: 20px;
   overflow: hidden;
 }
@@ -565,7 +639,7 @@ footer h3 {
 
 .tabla-precios th {
   background: var(--color-oscuro);
-  color: white;
+  color: var(--color-blanco);
   font-size: clamp(0.95rem, 1.5vw, 1.1rem);
   font-weight: 600;
   border: none;
@@ -585,17 +659,24 @@ footer h3 {
 }
 
 .tabla-precios tbody tr:hover {
-  background: linear-gradient(135deg, #caf0f8, #ade8f4);
+  background: linear-gradient(135deg, var(--color-primario),var(--color-terciario));
   transform: scale(1.015);
   box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
 }
 
 .tabla-precios tbody tr:hover td {
-  color: #023047;
+  color: #ffffff;
   font-weight: 500;
 }
 
 /*****PAGINA BLOG*****/
+.contenedor{
+  background: var(--color-claro);
+}
+
+.contenedor h2{
+  color: var(--color-negro);
+}
 
 /* Layout del Grid */
 .blog-grid {
@@ -613,7 +694,8 @@ footer h3 {
 /* Espaciado interno de cada tarjeta */
 .blog-card {
   margin: 10px; /* Margen individual opcional para separar más las sombras */
-  background: white;
+  background: var(--color-oscuro);
+  color: var(--color-claro);
   border-radius: 12px; /* Esquinas un poco más redondeadas para estilo revista */
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -677,7 +759,7 @@ input[name="categoria-blog"] {
 #cultura:checked ~ .botones-filtro label[for="cultura"],
 #naturaleza:checked ~ .botones-filtro label[for="naturaleza"],
 #aventura:checked ~ .botones-filtro label[for="aventura"] {
-  background-color: #0d6efd; /* Azul Bootstrap */
+  background-color: var(--color-oscuro); /* Azul Bootstrap */
   color: white;
   box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
 }
@@ -717,11 +799,16 @@ input[name="categoria-blog"] {
   }
 }
 
-.comentarios {
-  margin: 60px auto;
+.comentarios-contenedor {
+  background: var(--color-claro);
+  margin: 0px auto;
 }
 
-.comentario {
+.comentarios-contenedor h2{
+  color: var(--color-negro);
+}
+
+.comentario{
   background: #f4f4f4;
   padding: 20px;
   margin: 15px 0;
@@ -745,7 +832,7 @@ input[name="categoria-blog"] {
 
 /*****PAGINA CONTACTO*****/
 
-.contacto {
+.contacto {  
   padding: 60px 20px;
 }
 /* Contenedor del Formulario */
@@ -753,7 +840,7 @@ input[name="categoria-blog"] {
   max-width: 850px;
   margin: 50px auto;
   padding: 30px;
-  background: #fff;
+  background: var(--color-claro);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
@@ -779,7 +866,7 @@ input[name="categoria-blog"] {
 .campo label {
   font-weight: 600;
   margin-bottom: 5px;
-  color: #333;
+  color: var(--color-negro);
 }
 
 .campo input,
@@ -808,7 +895,7 @@ input[name="categoria-blog"] {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #80dfff; /* El celeste de tu captura */
+    background-color: var(--color-terciario);
     color: white;
     border: none;
     padding: 12px 20px;
@@ -840,11 +927,12 @@ input[name="categoria-blog"] {
 }
 
 .btn-enviar:disabled {
-    background-color: #a0e6ff;
+    background-color:var(--color-primario);
     cursor: not-allowed;
 }
 .btn-enviar:hover {
-  background-color: #5bc0de;
+  color:#000000;
+  background-color: var(--color-oscuro);
 }
 
 /* Modal */
@@ -884,8 +972,8 @@ input[name="categoria-blog"] {
 .btn-cerrar {
   margin-top: 15px;
   padding: 10px 20px;
-  background-color: #0d6efd;
-  color: white;
+  background-color: var(--color-oscuro);
+  color: var(--color-claro);
   border: none;
   border-radius: 5px;
   cursor: pointer;
