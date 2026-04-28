@@ -5,8 +5,8 @@
   --color-oscuro: #1597d3;
   --color-claro: #f8f9fa;
   --color-blanco: #ffffff;
-  --color-terciario:#00bcd4;
-  --color-negro:#000000;
+  --color-terciario: #00bcd4;
+  --color-negro: #000000;
 }
 
 /*Estilos Generales*/
@@ -21,34 +21,36 @@ body {
   line-height: 1.6;
   background-color: var(--color-claro);
   color: var(--color-negro);
-  transition: background-color 1.3s, color 0.3s;
+  transition:
+    background-color 1.3s,
+    color 0.3s;
 }
 
-.dark-mode{
+.dark-mode {
   --color-primario: #000000;
   --color-secundario: #cfcfcf;
   --color-oscuro: #cfcfcf;
   --color-claro: #3f3e3e;
   --color-blanco: #ffffff;
-  --color-terciario:#000000;
-  --color-negro:#fffdfd;
+  --color-terciario: #000000;
+  --color-negro: #fffdfd;
 }
 #modeToggle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
 #modeToggle:hover {
-    transform: rotate(20deg) scale(1.1);
+  transform: rotate(20deg) scale(1.1);
 }
-.dark-mode #modeToggle{
+.dark-mode #modeToggle {
   background-color: #f5f5f5;
   color: #3f3e3e;
 }
@@ -63,7 +65,11 @@ header {
 
 /*     ---NAVBAR----    */
 .navbar {
-  background: linear-gradient(135deg, var(--color-primario), var(--color-terciario));
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-terciario)
+  );
   padding: 1rem 0;
 }
 
@@ -113,11 +119,15 @@ header {
 /*     ---FOOTER----    */
 /************************/
 footer {
-  background: linear-gradient(135deg, var(--color-primario), var(--color-terciario));
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-terciario)
+  );
   color: var(--color-blanco);
 }
-#text-dark{
-  color:var(--color-negro);
+#text-dark {
+  color: var(--color-negro);
 }
 footer p,
 footer h3 {
@@ -211,7 +221,11 @@ footer h3 {
 }
 
 .btn-hero {
-  background: linear-gradient(135deg, var(--color-primario),var(--color-terciario));
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-terciario)
+  );
   border: 2px;
   transition: all 0.3s ease;
 }
@@ -226,11 +240,11 @@ footer h3 {
 /*    ---DESTINOS----   */
 /*   ---DESTACADOS----  */
 /************************/
-.destinos-destacados{
+.destinos-destacados {
   background: var(--color-claro);
 }
 .destino-card {
-  background: linear-gradient(135deg,var(--color-claro), var(--color-claro));
+  background: linear-gradient(135deg, var(--color-claro), var(--color-claro));
   transition: all 0.3s ease;
   overflow: hidden;
   border-radius: 12px;
@@ -244,7 +258,11 @@ footer h3 {
 
 .destino-card:hover {
   transform: translateY(-8px);
-  background: linear-gradient(135deg,var(--color-primario), var(--color-terciario));
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-terciario)
+  );
 }
 
 .destino-card:hover img {
@@ -261,26 +279,26 @@ footer h3 {
 }
 
 .destinos-destacados .card-text {
-    color: var(--color-negro);
-    font-size: 0.95rem;
+  color: var(--color-negro);
+  font-size: 0.95rem;
 }
 
 .destinos-destacados > .container > p {
-    color: var(--color-negro);
+  color: var(--color-negro);
 }
 
 .destinos-destacados .card-title {
-    color: var(--color-negro);
-    font-weight: bold;
+  color: var(--color-negro);
+  font-weight: bold;
 }
 
 .destinos-destacados .card-text {
-    color: var(--color-negro);
+  color: var(--color-negro);
 }
 /************************/
 /*   ---CONTADOR----    */
 /************************/
-.contador .contenedor{
+.contador .contenedor {
   background:
     linear-gradient(rgba(2, 48, 71, 0.685), rgba(2, 48, 71, 0.644)),
     url("../assets/img/destinos/salinas.jpg") center/cover no-repeat;
@@ -373,8 +391,8 @@ footer h3 {
   padding: 60px 20px;
   text-align: center;
 }
-.agencias h2{
-  color: var(--color-negro)
+.agencias h2 {
+  color: var(--color-negro);
 }
 .grid-agencias {
   display: grid;
@@ -421,7 +439,7 @@ footer h3 {
   background-color: var(--color-terciario);
 }
 
-.tarjeta-frente h3{
+.tarjeta-frente h3 {
   color: var(--color-negro);
 }
 
@@ -504,7 +522,7 @@ footer h3 {
   background: var(--color-claro);
 }
 
-.filtros h2{
+.filtros h2 {
   color: var(--color-negro);
 }
 
@@ -591,7 +609,6 @@ footer h3 {
   }
 }
 
-
 .table-responsive {
   border-radius: 15px;
   overflow: hidden;
@@ -611,10 +628,10 @@ footer h3 {
 .precios {
   padding: clamp(60px, 8vw, 100px) 20px;
   text-align: center;
-  background: var(--color-claro)
+  background: var(--color-claro);
 }
-.precios h2{
-  color: var(--color-negro)
+.precios h2 {
+  color: var(--color-negro);
 }
 .tabla-responsive {
   overflow-x: auto;
@@ -659,7 +676,11 @@ footer h3 {
 }
 
 .tabla-precios tbody tr:hover {
-  background: linear-gradient(135deg, var(--color-primario),var(--color-terciario));
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-terciario)
+  );
   transform: scale(1.015);
   box-shadow: 0 8px 20px rgba(0, 119, 182, 0.15);
 }
@@ -670,11 +691,11 @@ footer h3 {
 }
 
 /*****PAGINA BLOG*****/
-.contenedor{
+.contenedor {
   background: var(--color-claro);
 }
 
-.contenedor h2{
+.contenedor h2 {
   color: var(--color-negro);
 }
 
@@ -804,11 +825,11 @@ input[name="categoria-blog"] {
   margin: 0px auto;
 }
 
-.comentarios-contenedor h2{
+.comentarios-contenedor h2 {
   color: var(--color-negro);
 }
 
-.comentario{
+.comentario {
   background: #f4f4f4;
   padding: 20px;
   margin: 15px 0;
@@ -832,7 +853,7 @@ input[name="categoria-blog"] {
 
 /*****PAGINA CONTACTO*****/
 
-.contacto {  
+.contacto {
   padding: 60px 20px;
 }
 /* Contenedor del Formulario */
@@ -891,47 +912,49 @@ input[name="categoria-blog"] {
 /* Botón Celeste */
 /* Estilo base del botón */
 .btn-enviar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: var(--color-terciario);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-terciario);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 /* Diseño del Spinner (Círculo) */
 .spinner {
-    display: none; /* Oculto por defecto */
-    width: 18px;
-    height: 18px;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    border-top-color: #fff; /* Parte blanca que gira */
-    animation: girar 0.8s linear infinite;
+  display: none; /* Oculto por defecto */
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff; /* Parte blanca que gira */
+  animation: girar 0.8s linear infinite;
 }
 
 /* Animación de rotación */
 @keyframes girar {
-    to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Cuando el botón está en estado "cargando" */
 .btn-enviar.cargando .spinner {
-    display: inline-block; /* Se muestra el spinner */
+  display: inline-block; /* Se muestra el spinner */
 }
 
 .btn-enviar:disabled {
-    background-color:var(--color-primario);
-    cursor: not-allowed;
+  background-color: var(--color-primario);
+  cursor: not-allowed;
 }
 .btn-enviar:hover {
-  color:#000000;
+  color: #000000;
   background-color: var(--color-oscuro);
 }
 
@@ -995,4 +1018,64 @@ input[name="categoria-blog"] {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+--------------------- PHISHING ------------------------------
+/* Configuración para centrar el contenido */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.main-container {
+    /* Ocupa el espacio entre header y footer */
+    min-height: 80vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo del cuadro de alerta */
+.phishing-card {
+    background: #ffffff;
+    max-width: 650px;
+    width: 100%;
+    padding: 45px;
+    border-radius: 20px;
+    border: 2px dashed #dc3545; /* Borde rojo punteado */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.phishing-card:hover {
+    transform: translateY(-5px);
+}
+
+.alert-title {
+    color: #dc3545;
+    font-weight: 800;
+    font-size: 2.3rem;
+}
+
+.alert-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #212529;
+}
+
+.alert-instruction {
+    color: #6c757d;
+    margin-bottom: 25px;
+}
+
+/* Estilos internos del Modal */
+.signal-box {
+    background: #fffafa;
+    border-left: 5px solid #dc3545;
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 0 10px 10px 0;
+    text-align: left;
 }

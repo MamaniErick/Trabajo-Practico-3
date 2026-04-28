@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Módulo Educativo: Phishing - UNJu</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="stylesheet" href="css/sprite.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow"
+      >
+        <button
+          id="modeToggle"
+          class="btn btn-outline-light ms-2"
+          aria-label="Cambiar tema"
+        >
+          <i class="bi bi-moon-fill"></i>
+        </button>
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand fw-bold" href="index.html">
+            DESTINOS|Mega Turismo
+          </a>
+          <!-- Boton Menu-->
+          <button
+            class="navbar-toggler border-0 shadow-none"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú para Pantallas Largas-->
+          <div
+            class="collapse navbar-collapse justify-content-end d-none d-lg-flex"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">INICIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="agencias.html">Agencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="precios.html">Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Menú para Pantalla chicas-->
+          <ul class="dropdown-menu dropdown-menu-end shadow-lg mt-2 d-lg-none">
+            <li>
+              <a class="dropdown-item" href="index.html">INICIO</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="agencias.html">Agencias</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="precios.html">Precios</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="contacto.html">Contacto</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <div class="phishing-card shadow">
+        <h2 class="alert-title">⚠️ Alerta de Seguridad</h2>
+        <p class="alert-subtitle">
+          Se ha detectado un intento de acceso inusual en tu cuenta de la
+          Universidad.
+        </p>
+        <p class="alert-instruction">
+          Para proteger tu información, es necesario que valides tus
+          credenciales inmediatamente.
+        </p>
+
+        <button
+          type="button"
+          class="btn btn-danger btn-lg px-5 mt-3"
+          data-bs-toggle="modal"
+          data-bs-target="#phishingModal"
+        >
+          Simulación de Phishing
+        </button>
+      </div>
+    </main>
+
+    <div class="modal fade" id="phishingModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-danger text-white border-0">
+            <h5 class="modal-title fw-bold">Módulo Educativo: Phishing</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="alert alert-warning border-warning shadow-sm">
+              <strong>Advertencia clara:</strong> ¡Esto es un ejercicio
+              controlado! En un ataque real, tus datos personales (usuario,
+              clave, tarjeta) estarían en grave riesgo tras hacer clic en el
+              botón rojo.
+            </div>
+
+            <h5 class="mt-4 fw-bold text-dark">Ejemplos Educativos</h5>
+            <p class="text-secondary">
+              Los ciberdelincuentes suelen suplantar la identidad de la
+              <strong>Universidad Nacional de Jujuy</strong> o empresas como
+              <strong>Mega Turismo</strong> enviando correos falsos de "alerta"
+              para que actúes por miedo sin revisar la fuente.
+            </p>
+
+            <h5 class="mt-4 fw-bold text-dark">
+              Señales de fraude (Cómo detectarlo)
+            </h5>
+            <div class="signal-box">
+              <strong>1. Urgencia:</strong> El mensaje te presiona para actuar
+              "inmediatamente".
+            </div>
+            <div class="signal-box">
+              <strong>2. El Link:</strong> Si pasas el ratón por encima del
+              botón, verás que la dirección real no pertenece a
+              <code>unju.edu.ar</code>.
+            </div>
+            <div class="signal-box">
+              <strong>3. Datos Reales:</strong> Recuerda que en este módulo
+              <strong>no se permite robo de datos</strong>; nunca ingreses tus
+              claves en sitios que no tengan el candado de seguridad oficial.
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-outline-danger"
+              data-bs-dismiss="modal"
+            >
+              Entendido, cerrar lección
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-2 pb-3">
+      <div class="container-footer ms-5 me-5">
+        <div class="row g-4">
+          <!-- Redes Sociales con Sprite -->
+          <div class="col-lg-4 text-center">
+            <h3 class="mb-3">Síguenos</h3>
+
+            <div class="d-flex justify-content-center gap-2">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon facebook"
+                aria-label="Facebook"
+              ></a>
+
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon instagram"
+                aria-label="Instagram"
+              ></a>
+
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon twitter"
+                aria-label="Twitter"
+              ></a>
+
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-icon youtube"
+                aria-label="YouTube"
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-10 col-md-6 col-lg-4 mx-auto mt-4 text-center pt-4">
+            <p class="mb-0">
+              &copy; 2026 Mega Turismo. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
