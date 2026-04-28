@@ -266,8 +266,6 @@ $(document).ready(function () {
     mostrarScroll();
   });
 
-  //       PHISHING
-  /**********************/
 
   //     MODO OSCURO  
   /**********************/
