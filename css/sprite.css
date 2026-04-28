@@ -1,11 +1,23 @@
 /*=========================================
     SPRITE REDES SOCIALES
 =========================================*/
+.social-icon {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-image: url("../assets/img/icons/icons.png");
+    background-repeat: no-repeat;
+    background-size: 210px 65px; /* 4 iconos */
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
 
-/*=========================================
-    BOTONES CON SPRITE
-=========================================*/
+.facebook  { background-position: 10 0; }
+.instagram { background-position: -50px 0; }
+.twitter   { background-position: -108px 0; }
+.youtube   { background-position: -164px 0; }
 
-/*=========================================
-    ICONOS PERSONALIZADOS
-=========================================*/
+.social-icon:hover {
+    transform: scale(1.1);
+}
